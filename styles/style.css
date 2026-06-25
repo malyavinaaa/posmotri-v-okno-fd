@@ -12,14 +12,13 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: auto;
+  padding: 133px 30px 133px 30px;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
-  block-size: 100%;
 }
 
 h1,
@@ -96,6 +95,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__list {
@@ -104,12 +104,15 @@ ol {
   align-items: flex-start;
   gap: 30px;
   width: 390px;
+  min-height: 298px;
+}
+
+.content__list:not(:last-child) {
   margin-bottom: 30px;
 }
 
 .content__list-item {
   width: 390px;
-  height: 103px;
   padding-right: 3px;
   padding-left: 3px;
 }
@@ -140,7 +143,7 @@ ol {
 .search-form__fieldset-title {
   margin-bottom: 5px;
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: normal;
   font-size: 18px;
   font-style: normal;
@@ -149,7 +152,7 @@ ol {
 .title {
   height: 210px;
   color: #fff;
-  font-family: Oswald;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -171,7 +174,7 @@ ol {
   width: 196px;
   overflow: hidden;
   color: #fff;
-  font-family: Oswald;
+  font-family: "Oswald", sans-serif;
   font-weight: bold;
   font-size: 30px;
   line-height: 100%;
@@ -183,10 +186,9 @@ ol {
 .content__video-card-description {
   display: -webkit-box;
   width: 196px;
-  height: 65px;
   padding-top: 6px;
   overflow: hidden;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: 16.2px;
@@ -226,12 +228,12 @@ ol {
 
 .search-form__textfield {
   width: 225px;
-  height: 27px;
+  min-height: 27px;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: normal;
   font-size: 18px;
   background-color: transparent;
@@ -246,6 +248,7 @@ ol {
 .search-form__label:has(:focus-visible) {
   border-radius: 0;
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__textfield::placeholder {
@@ -277,14 +280,19 @@ ol {
   text-decoration: underline;
 }
 
+.search-form__label:has(.search-form__checkbox):active {
+  text-decoration: none;
+}
+
+
 .button {
-  height: 34px;
+  min-height: 34px;
   border: 1px solid #fff;
   border-radius: 0;
   padding: 3px;
   color: #fff;
-  font-family: Fira Sans Condensed;
-  font-weight: normal;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: bold;
   font-size: 18px;
   line-height: 100%;
   background-color: transparent;
@@ -305,6 +313,7 @@ ol {
 }
 
 .button:active {
+  text-decoration: none;
   background-color: #545050;
 }
 
@@ -319,10 +328,11 @@ ol {
 }
 
 .content__card-link_current {
-  background-color: transparent;
+  background-color: #545050;
 }
 
 .content__card-link:active {
+  text-decoration: none;
   background-color: #545050;
 }
 
@@ -337,4 +347,5 @@ ol {
 .content__card-link:focus-visible {
   border-radius: 0;
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
